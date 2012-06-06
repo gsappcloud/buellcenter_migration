@@ -12,6 +12,9 @@ regions[navigation] = Navigation
 regions[footer] = Footer
 
 
+scripts[] = buell.js
+
+
 ; Information added by drupal.org packaging script on 2011-11-09
 version = "6.x-3.3"
 core = "6.x"
