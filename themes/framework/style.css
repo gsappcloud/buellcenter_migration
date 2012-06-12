@@ -43,14 +43,16 @@ Equation for font sizing:
  * 1.GLOBAL
  */
 
+html, body {height: 100%;}
+
 body {
-  background: #fff;
-  color: #222;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
+	margin: 0; padding: 0;
+	background: #ededed;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 11px;
+	line-height: 17px;
+	color: #666666;
+	background: none repeat scroll 0 0 #EDEDED
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -59,6 +61,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: normal;
 }
 
+h1#page-title {
+	display:none;
+}
+
+
 h1, .h1 {
   font-size: 2em;
   line-height: 1.5;
@@ -66,15 +73,21 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-top: 1em;
+	color: #000000;
+	font-weight: bold;
+	padding: 10px 0px 0px 0px;
+
+}
+
+h2 a {
+	font-weight: bold;
+	text-decoration: underline
 }
 
 h3, .h3 {
-  font-size: 1.25em;
-  line-height: 1.2;
-  margin-top: 1.2em;
+	color: #000000;
+	font-weight: bold;
+	padding: 5px 0px 0px 0px;
 }
 
 h4, h5, h6, .h4, .h5, .h6 {
@@ -91,15 +104,41 @@ p {
 
 }
 
-a { color: #069; text-decoration: none; }
+a {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+}
+a:visited {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover, a:active {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
 
-a:visited { color: #309; }
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
+color: #000000;
+    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
+    text-decoration: none;
+}
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
+color: #000000;
+    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
+    text-decoration: underline;
+}
 
-a:hover, a:active, li a.active  { color: #39f; }
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a {
+border: 0 none;
+    color: #000000;
+    display: block;
+    font: bold 16px/1.3em Georgia,"Times New Roman",Times,serif;
+    text-decoration: none;
+}
 
-a:focus { outline: thin dotted; }
-
-a:hover, a:active { outline: 0; }
 
 /* apply common styling after reset.css */
 
@@ -117,14 +156,45 @@ th, tr, td {  vertical-align: middle; }
 th { padding-right: 1em; }
 .sticky-header th, .sticky-table th {  border-bottom: 3px solid #ccc;  padding-right: 1em;  text-align: left; }
 
+/* buellcenter specific */
+p, h1, h2, h3, h4, ul, li{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 11px;
+	color: #000;
+}
+
+b, strong {
+	font-weight: bold;
+	color: #000;
+}
+
+a:hover img {
+	position: relative;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /*--IE8 Specific--*/
+}
+
+div#buell-mark {
+ background-repeat: no-repeat;
+    bottom: 30px;
+    height: 170px;
+    position: fixed;
+    right: 30px;
+    width: 149px;
+    z-index: 10000;
+    }
+
 /**
  * 2.LAYOUT
  */
 
 #container {
-  margin: 0 auto;
-  padding: 0 10px;
-  width: 940px;
+		margin-left: 10px;
+    margin-top: -10px;
+    padding: 0 10px;
+    overflow: hidden;
+    width: 850px;
 }
 
 /**
@@ -150,10 +220,10 @@ body.two-sidebars #main {
 /* 2 columns: sidebar-left */
 
 body.sidebar-left #main {
-  float: right;
-  margin: 0;
-  padding: 0;
-  width: 700px;
+background-color: #FFFFFF;
+    float: right;
+    padding: 20px;
+    width: 550px;
 }
 
 /* 2 columns: sidebar-right */
@@ -173,7 +243,7 @@ body.sidebar-right #main {
 
 body.two-sidebars #sidebar-left {
   float: left;
-  margin: 0 0 0 -700px;
+  margin: 0;
   padding: 0;
   width: 220px;
 }
@@ -190,10 +260,12 @@ body.two-sidebars #sidebar-right {
 /* 2 columns: sidebar-left */
 
 body.sidebar-left #sidebar-left {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 220px;
+ float: left;
+    margin-right: 20px;
+margin-top: -20px;
+    padding: 0;
+    width: 240px;
+    position:fixed;
 }
 
 /* 2 columns: sidebar-right */
@@ -409,6 +481,92 @@ ul.secondary a.active {
   margin-bottom: 1.5em;
 }
 
+
+
+/* conference nodes */
+.conf-teaser {
+	display: inline;
+}
+
+
+.conf-hidden {
+	display: none;
+}
+
+
+/* publications view */
+html.js body.not-front div#container.clearfix section#main.clearfix div.view div.view-content table.views-view-grid tbody tr td div.views-field-field-conf-description-value div.field-content {
+	width: 245px;
+	padding-top:10px;
+	margin-bottom:25px;
+	margin-right: 40px;
+}
+
+/* research and program nodes */
+.rd-teaser-title a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.rd-teaser-title a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.rd-additional-images {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.rd-additional-image {
+	width: 265px;
+	height: 175px;
+	margin-right: 10px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.rd-additional-video {
+	width: 265px;
+	height: 225px;
+	margin-right: 10px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/* rd tax term page */
+html.js body.not-front div#container.clearfix footer#footer.clearfix a.feed-icon img {
+	display: none;
+}
+
+/* sidebar block */
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {
+color: #000000;
+    font: 12px/20px Georgia,"Times New Roman",Times,serif;
+    padding-bottom: 6px;
+    text-indent: 0;
+		text-decoration: none;
+		
+}
+
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a:hover {
+	color: #000000;
+    font: 12px/20px Georgia,"Times New Roman",Times,serif;
+    padding-bottom: 6px;
+    text-indent: 0;
+		text-decoration: underline;
+		
+}
+
+html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block h2 {
+	color: #000000;
+    font: 12px/20px Georgia,"Times New Roman",Times,serif;
+    padding-bottom: 6px;
+    text-indent: 0;
+		text-decoration: none;
+		font-weight: bold;
+
+}
 /* tags */
 
 .terms {
@@ -459,10 +617,19 @@ ul.secondary a.active {
 /**
  * 9.BLOCKS
  */
+ 
+ 
+ /* logo block */
+#block-block-1 {
+	height: 100px;
+}
 
 .block {
-  margin-bottom: 1.5em;
-  position: relative;
+  background-color: #FFFFFF;
+    margin-bottom: 1.5em;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
 }
 
 /* login block */

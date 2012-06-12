@@ -1,36 +1,11 @@
 /* @group Typography  */
 
-p, h1, h2, h3, h4, ul, li{
-	font-family: "Courier New", Courier, monospace;
-	font-size: 11px;
-	color: #000;
-}
-
-b{
-	font-weight: bold;
-	color: #000;
-}
-
-a:hover img {
-	position: relative;
-	filter: alpha(opacity=80);
-	opacity: 0.8;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /*--IE8 Specific--*/
-}
-
-
 p.last{
 	padding: 0px 0px 10px 0px;
 }
 
 p.new-section{
 	clear: both;
-	padding: 10px 0px 0px 0px;
-}
-
-h2 {
-	color: #000000;
-	font-weight: bold;
 	padding: 10px 0px 0px 0px;
 }
 
@@ -48,11 +23,6 @@ p.new-section{
 }
 
 
-h3 {
-	color: #000000;
-	font-weight: bold;
-	padding: 5px 0px 0px 0px;
-}
 
 h2.first{
 	padding: 0px 0px 5px 0px;
@@ -63,26 +33,8 @@ h2.first{
 }
 
 
-h2 a {
-	font-weight: bold;
-	text-decoration: underline
-}
 
-a {
-	font-weight: normal;
-	color: #000000;
-	text-decoration: underline;
-}
-a:visited {
-	font-weight: normal;
-	color: #000000;
-	text-decoration: none;
-}
-a:hover {
-	font-weight: normal;
-	color: #000000;
-	text-decoration: none;
-}
+
 
 em{
 	font-size: 10px;
@@ -91,9 +43,6 @@ em{
 }
 
 
-strong{
-	color: #000;
-}
 /* @end */
 
 
@@ -111,16 +60,6 @@ strong{
 
 
 
-html, body {height: 100%;}
-
-body {
-	margin: 0; padding: 0;
-	background: #ededed;
-	font-family: "Courier New", Courier, monospace;
-	font-size: 11px;
-	line-height: 17px;
-	color: #666666;
-}
 
 #public-housing-public-sphere{
 	background-color: #c3a303;

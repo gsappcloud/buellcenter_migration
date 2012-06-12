@@ -85,7 +85,7 @@
           <?php endif; ?>
         </nav> <!-- /#navigation -->
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+      <?php //if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
     </header> <!-- /#header -->
 
     <section id="main" role="main" class="clearfix">
@@ -109,6 +109,12 @@
         <?php print $right; ?>
       </aside> <!-- /sidebar-right -->
     <?php endif; ?>
+    
+    <div id="buell-mark">
+    	<a href="/">
+    		<img src="/sites/all/themes/framework/images/buell-mark.png" width="" height="" alt="Buellcenter.org" title="" />
+    	</a>
+    </div>
 
     <footer id="footer" role="contentinfo" class="clearfix">
       <?php print $footer_message; ?>
