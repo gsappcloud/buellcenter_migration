@@ -120,18 +120,18 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
 color: #000000;
     font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
     text-decoration: none;
 }
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
 color: #000000;
     font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
     text-decoration: underline;
 }
 
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a {
 border: 0 none;
     color: #000000;
     display: block;
@@ -495,7 +495,7 @@ ul.secondary a.active {
 
 
 /* publications view */
-html.js body.not-front div#container.clearfix section#main.clearfix div.view div.view-content table.views-view-grid tbody tr td div.views-field-field-conf-description-value div.field-content {
+html.js body div#container.clearfix section#main.clearfix div.view div.view-content table.views-view-grid tbody tr td div.views-field-field-conf-description-value div.field-content {
 	width: 245px;
 	padding-top:10px;
 	margin-bottom:25px;
@@ -535,12 +535,12 @@ html.js body.not-front div#container.clearfix section#main.clearfix div.view div
 }
 
 /* rd tax term page */
-html.js body.not-front div#container.clearfix footer#footer.clearfix a.feed-icon img {
+html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 	display: none;
 }
 
 /* sidebar block */
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {
 color: #000000;
     font: 12px/20px Georgia,"Times New Roman",Times,serif;
     padding-bottom: 6px;
@@ -549,7 +549,7 @@ color: #000000;
 		
 }
 
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a:hover {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a:hover {
 	color: #000000;
     font: 12px/20px Georgia,"Times New Roman",Times,serif;
     padding-bottom: 6px;
@@ -558,7 +558,7 @@ html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section
 		
 }
 
-html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block h2 {
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block h2 {
 	color: #000000;
     font: 12px/20px Georgia,"Times New Roman",Times,serif;
     padding-bottom: 6px;
@@ -567,6 +567,24 @@ html.js body.not-front div#container.clearfix aside#sidebar-left.sidebar section
 		font-weight: bold;
 
 }
+
+html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node a {
+color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node a:hover {
+color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node {
+  margin-bottom: 30px;
+}
+
+
 /* tags */
 
 .terms {

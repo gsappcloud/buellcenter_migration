@@ -14,6 +14,9 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  
+  <link rel="shortcut icon" href="/sites/all/themes/framework/images/favicon.ico" />
+  
 </head>
 
 <body class="<?php print $body_classes; ?>">
