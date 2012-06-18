@@ -77,7 +77,6 @@ h1, .h1 {
 h2, .h2 {
 	color: #000000;
 	font-weight: bold;
-	padding: 10px 0px 0px 0px;
 
 }
 
@@ -124,12 +123,11 @@ a:hover, a:active {
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
 color: #000000;
-    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
+    font: bold 12px/2.4em Georgia,"Times New Roman",Times,serif;
     text-decoration: none;
 }
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
 color: #000000;
-    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
     text-decoration: underline;
 }
 
@@ -137,8 +135,10 @@ html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-blo
 border: 0 none;
     color: #000000;
     display: block;
-    font: bold 16px/1.3em Georgia,"Times New Roman",Times,serif;
+    font: bold 16px/21px Georgia,"Times New Roman",Times,serif;
     text-decoration: none;
+    height: 84px;
+    
 }
 
 
@@ -193,7 +193,6 @@ div#buell-mark {
 
 #container {
 		margin-left: 10px;
-    margin-top: -7px;
     padding: 0 10px;
     overflow: hidden;
     width: 850px;
@@ -285,7 +284,7 @@ body.sidebar-right #sidebar-right {
 
 #header {
   margin: 0;
-  padding: 2.5em 0 0;
+  padding: 20px 0 0;
   position: relative;
 }
 
@@ -641,15 +640,14 @@ html.js body.front div#container.clearfix section#main.clearfix div.content div#
  
  /* logo block */
 #block-block-1 {
-	height: 100px;
 }
 
 .block {
   background-color: #FFFFFF;
-    margin-bottom: 1.5em;
     margin-top: 20px;
     padding: 20px;
     position: relative;
+    line-height: 2.3em;
 }
 
 /* login block */
