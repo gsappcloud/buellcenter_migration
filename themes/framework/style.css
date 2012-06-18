@@ -1,3 +1,5 @@
+/* @override http://www.buellcenter.gsapp.org/sites/all/themes/framework/style.css?r */
+
 /* Drupal 6 Framework - Created by Andre Griffin
 ------------------------------------------------
 [Table of contents]
@@ -191,7 +193,7 @@ div#buell-mark {
 
 #container {
 		margin-left: 10px;
-    margin-top: -10px;
+    margin-top: -7px;
     padding: 0 10px;
     overflow: hidden;
     width: 850px;
