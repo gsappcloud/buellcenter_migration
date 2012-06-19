@@ -485,7 +485,7 @@ ul.secondary a.active {
  */
 
 .node {
-  margin-bottom: 1.5em;
+  margin-bottom: 40px;
 }
 
 
@@ -510,6 +510,12 @@ html.js body div#container.clearfix section#main.clearfix div.view div.view-cont
 }
 
 /* research and program nodes */
+
+.rd-teaser-title{
+	padding-top: 4px;
+}
+
+
 .rd-teaser-title a {
 	text-decoration: none;
 	font-weight: bold;
@@ -539,6 +545,10 @@ html.js body div#container.clearfix section#main.clearfix div.view div.view-cont
 	margin-right: 10px;
 	float: left;
 	margin-bottom: 10px;
+}
+
+.rd-header-image {
+	padding-bottom: 4px;
 }
 
 /* rd tax term page */
@@ -801,6 +811,7 @@ div.view div.views-admin-links li a {
   height: 0;
   clear: both;
   visibility: hidden;
+ 
 }
 
 /* IE6 */
