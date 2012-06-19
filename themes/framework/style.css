@@ -500,6 +500,12 @@ ul.secondary a.active {
 	display: none;
 }
 
+.line-body {
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 60%;
+}
 
 /* publications view */
 html.js body div#container.clearfix section#main.clearfix div.view div.view-content table.views-view-grid tbody tr td div.views-field-field-conf-description-value div.field-content {
@@ -555,6 +561,12 @@ html.js body div#container.clearfix section#main.clearfix div.view div.view-cont
 html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 	display: none;
 }
+
+/* rd sidebar block list items */
+#block-views-research_programs-block_1.block div.content div.view div.view-content div.item-list ul li.views-row {
+	color: red;
+}
+
 
 /* sidebar block */
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {

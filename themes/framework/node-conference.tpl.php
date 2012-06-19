@@ -10,7 +10,7 @@
       <?php print $picture ?>
 
 	  <?php if (!$page): ?>
-        <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+        <h2><?php print $title ?></h2>
         <?php
         // get node body and add more/less w jquery
         $desc = $node->field_conf_description[0]['value'];
@@ -33,17 +33,10 @@
         	'<a href="#" class="hide-conf" id="' . $nid . '">+ Less</a><br/>' . 
         	'</span>';
         
-        
-        
+        print '<div class="line-body"></div>';
         ?>
         
         
-        
-        
-      <?php endif; ?>
-
-	  <?php if ($submitted): ?>
-        <span class="submitted"><?php print $submitted; ?></span>
       <?php endif; ?>
 
     <?php if (!$page): ?>
@@ -51,10 +44,18 @@
 	<?php endif; ?>
   <?php endif;?>
 
+	<?php if ($page): //----------------------- ?>
   <div class="content">
-    <?php print $content ?>
+		<?php 
+		
+			print '<strong>' . $node->title . '</strong><br/>';
+		  print $node->field_conf_description[0]['value'];
+      
+		
+		?>
   </div>
-
+	<?php endif; //-----------------------  ?>
+	
   <?php if (!empty($terms) || !empty($links)): ?>
     <footer>
       <?php if ($terms): ?>
