@@ -1,4 +1,7 @@
-/* @override http://www.buellcenter.gsapp.org/sites/all/themes/framework/style.css?r */
+/* @override 
+	http://www.buellcenter.gsapp.org/sites/all/themes/framework/style.css?r
+	http://buellcenter.gsapp.org/sites/all/themes/framework/style.css?r
+*/
 
 /* Drupal 6 Framework - Created by Andre Griffin
 ------------------------------------------------
@@ -169,6 +172,7 @@ p, h1, h2, h3, h4, ul, li{
 	font-size: 11px;
 	color: #000;
 }
+
 
 b, strong {
 	font-weight: bold;
@@ -563,25 +567,33 @@ html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 }
 
 /* rd sidebar block list items */
+
+
+
+
+
 #block-views-research_programs-block_1.block div.content div.view div.view-content div.item-list ul li.views-row {
 	color: red;
+	list-style-type: none;
+	font: 12px/20px Georgia,"Times New Roman",Times,serif;
+	padding-bottom: 6px;
+	margin-left: -16px !important;
+	text-indent: 0;
+	
+}
+
+#block-views-research_programs-block_1.block div.content div.view div.view-content div.item-list ul li.views-row a {
+	text-decoration: none;
+	
+}
+
+#block-views-research_programs-block_1.block div.content div.view div.view-content div.item-list ul li.views-row a:hover {
+	text-decoration: underline;
+	
 }
 
 
-/* sidebar block */
-html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {
-color: #000000;
-    font: 12px/26px Georgia,"Times New Roman",Times,serif;
-    padding-bottom: 6px !important;
-    text-indent: 0;
-		text-decoration: none;
-		
-}
 
-html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a:hover {
-		text-decoration: underline;
-		
-}
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block h2 {
 	color: #000000;
