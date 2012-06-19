@@ -10,7 +10,7 @@
       <?php print $picture ?>
 
 	  <?php if (!$page): ?>
-        <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+        <h2><?php print $title ?></h2>
         <?php
         // get node body and add more/less w jquery
         $desc = $node->field_conf_description[0]['value'];
@@ -32,7 +32,7 @@
         	$remaining_post . 
         	'<a href="#" class="hide-conf" id="' . $nid . '">+ Less</a><br/>' . 
         	'</span>';
-        
+                print '<div class="line-body"></div>';
         
         
         ?>

@@ -493,6 +493,12 @@ ul.secondary a.active {
 	display: none;
 }
 
+.line-body {
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 60%;
+}
 
 /* publications view */
 html.js body div#container.clearfix section#main.clearfix div.view div.view-content table.views-view-grid tbody tr td div.views-field-field-conf-description-value div.field-content {
