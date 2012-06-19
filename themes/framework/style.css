@@ -1,3 +1,5 @@
+/* @override http://www.buellcenter.gsapp.org/sites/all/themes/framework/style.css?r */
+
 /* Drupal 6 Framework - Created by Andre Griffin
 ------------------------------------------------
 [Table of contents]
@@ -75,7 +77,6 @@ h1, .h1 {
 h2, .h2 {
 	color: #000000;
 	font-weight: bold;
-	padding: 10px 0px 0px 0px;
 
 }
 
@@ -122,12 +123,11 @@ a:hover, a:active {
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
 color: #000000;
-    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
+    font: bold 12px/30px Georgia,"Times New Roman",Times,serif;
     text-decoration: none;
 }
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
-color: #000000;
-    font: bold 12px/2em Georgia,"Times New Roman",Times,serif;
+	color: #000000;
     text-decoration: underline;
 }
 
@@ -135,8 +135,15 @@ html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-blo
 border: 0 none;
     color: #000000;
     display: block;
-    font: bold 16px/1.3em Georgia,"Times New Roman",Times,serif;
+    font: bold 16px/21px Georgia,"Times New Roman",Times,serif;
     text-decoration: none;
+    height: 84px;
+    
+}
+html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a:hover {
+	color: #666;
+  
+    
 }
 
 
@@ -190,12 +197,12 @@ div#buell-mark {
  */
 
 #container {
-		margin-left: 10px;
-    margin-top: -10px;
+	margin-left: 10px;
     padding: 0 10px;
     overflow: hidden;
     width: 850px;
 }
+
 
 /**
  * 3.MAIN
@@ -283,7 +290,7 @@ body.sidebar-right #sidebar-right {
 
 #header {
   margin: 0;
-  padding: 2.5em 0 0;
+  padding: 20px 0 0;
   position: relative;
 }
 
@@ -548,18 +555,14 @@ html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 /* sidebar block */
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a {
 color: #000000;
-    font: 12px/20px Georgia,"Times New Roman",Times,serif;
-    padding-bottom: 6px;
+    font: 12px/26px Georgia,"Times New Roman",Times,serif;
+    padding-bottom: 6px !important;
     text-indent: 0;
 		text-decoration: none;
 		
 }
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block div.content div.view div.view-content div.views-row div.views-field-name span.field-content a:hover {
-	color: #000000;
-    font: 12px/20px Georgia,"Times New Roman",Times,serif;
-    padding-bottom: 6px;
-    text-indent: 0;
 		text-decoration: underline;
 		
 }
@@ -577,17 +580,17 @@ html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-vie
 html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node a {
 color: #000000;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node a:hover {
 color: #000000;
-    font-weight: bold;
-    text-decoration: underline;
+    font-weight: normal;
+    text-decoration: none;
 }
 
 html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 
@@ -645,12 +648,10 @@ html.js body.front div#container.clearfix section#main.clearfix div.content div#
  
  /* logo block */
 #block-block-1 {
-	height: 100px;
 }
 
 .block {
   background-color: #FFFFFF;
-    margin-bottom: 1.5em;
     margin-top: 20px;
     padding: 20px;
     position: relative;
