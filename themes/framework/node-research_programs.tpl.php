@@ -99,8 +99,9 @@
 
     // attachments
     $attachment = $node->field_rd_attachment[0]['view'];
-    print '<div class="rd-attachment"><strong>Attachments</strong>:<br/>' . $attachment . '</div>';
-
+    if (strlen($attachment) > 10) {
+     print '<div class="rd-attachment"><strong>Attachments</strong>:<br/>' . $attachment . '</div>';
+    }
 
     
     
