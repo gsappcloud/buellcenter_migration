@@ -44,8 +44,10 @@
     			'<a href="' . $header_link_url . '" target="_blank">' . 
     			$header_image . '</a></div>';
     	} else {
-    		print '<div class="rd-header-image">' .
-    			$header_image . '</div>';
+        $header_image = $node->field_rd_image[0]['filepath'];
+
+        print '<div class="rd-header-image">' .
+          theme('imagecache', 'teaser_image_550x250', $header_image, '', '') . '</div>';
     	}
     }
     
@@ -55,6 +57,8 @@
     }
     
     print '<strong>' . $title . '</strong>';
+
+
     print $node->field_rd_teaser_text[0]['view'] . '<br/>';
     print $node->field_conf_description[0]['view'];
 
@@ -91,6 +95,13 @@
 				}
 			print '</div>';
 		}
+
+
+    // attachments
+    $attachment = $node->field_rd_attachment[0]['view'];
+    print '<div class="rd-attachment"><strong>Attachments</strong>:<br/>' . $attachment . '</div>';
+
+
     
     
                     
