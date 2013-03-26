@@ -35,7 +35,11 @@ $(document).ready(function() {
 	
 
 	/* show hide about subsections */
-	if (window.location.pathname == "/about") {
+	if (
+		(window.location.pathname == "/about")   || 
+		(window.location.pathname == "/history") ||
+		(window.location.pathname == "/people")  ||
+		(window.location.pathname == "/contact")) {
 		$("#about-submenu").show();
 	}
 
@@ -51,14 +55,26 @@ $(document).ready(function() {
 			'text-decoration': 'none'}
 	);
 
+	// show hide menu based on cookie
+ 	var current_state = document.cookie;
+ 	console.log(current_state);
+
+ 	if (current_state.indexOf("buellcenter-org-menu=showing") < 0) {
+ 		// hide the menu based on cookie
+ 		$("#research_programs_showhide").text("[ + ]");
+  	$("div.view-id-research_programs").hide();
+ 	}
+
+ 	
 	$('#research_programs_showhide').bind("click", function() {
   	if (counter % 2 == 0) {
   		$("#research_programs_showhide").text("[ + ]");
   		$("div.view-id-research_programs").hide();
+  		document.cookie = "buellcenter-org-menu=hidden";
   	} else {
   		$("#research_programs_showhide").text("[ - ]");
   		$("div.view-id-research_programs").show();
-
+			document.cookie = "buellcenter-org-menu=showing";
   	}
   	counter++;
   });
