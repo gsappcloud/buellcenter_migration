@@ -855,3 +855,7 @@ div.view div.views-admin-links li a {
 
 /* display block */
 .display-block { display: block; }
+
+em{
+  font-style: italic;
+}

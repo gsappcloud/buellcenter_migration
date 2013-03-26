@@ -196,6 +196,8 @@ function framework_preprocess_block(&$vars, $hook) {
   $vars['edit_links'] = !empty($vars['edit_links_array']) ? '<div class="edit">' . implode(' ', $vars['edit_links_array']) . '</div>' : '';
 }
 
+
+
 /* customize taxonomy listings
 */
 function framework_preprocess_node(&$vars) {
