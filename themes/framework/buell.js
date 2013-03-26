@@ -39,9 +39,29 @@ $(document).ready(function() {
 		$("#about-submenu").show();
 	}
 
+	/* research programs block show hide */
+	/* adding the plus minus logic here, since the default drupal block title does not
+	   support HTML characters */
+	var rp_title = $("#block-views-research_programs-block_1 h2").html();
+	$("#block-views-research_programs-block_1 h2").html(rp_title + "&nbsp; <a href=\"#\" id=\"research_programs_showhide\">[ - ]</a>");
 
+	var counter = 0;
+	$('#research_programs_showhide').css(
+		{	'font-weight': 'normal',
+			'text-decoration': 'none'}
+	);
 
-	
+	$('#research_programs_showhide').bind("click", function() {
+  	if (counter % 2 == 0) {
+  		$("#research_programs_showhide").text("[ + ]");
+  		$("div.view-id-research_programs").hide();
+  	} else {
+  		$("#research_programs_showhide").text("[ - ]");
+  		$("div.view-id-research_programs").show();
+
+  	}
+  	counter++;
+  });
 
 });
 
