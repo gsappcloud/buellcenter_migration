@@ -125,22 +125,22 @@ a:hover, a:active {
 }
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a {
-color: #000000;
-    font: bold 12px/30px Georgia,"Times New Roman",Times,serif;
-    text-decoration: none;
+  color: #000000;
+  font: bold 12px/30px Georgia,"Times New Roman",Times,serif;
+  text-decoration: none;
 }
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-2.block div.content p a:hover {
 	color: #000000;
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a {
-border: 0 none;
-    color: #000000;
-    display: block;
-    font: bold 16px/21px Georgia,"Times New Roman",Times,serif;
-    text-decoration: none;
-    height: 84px;
+  border: 0 none;
+  color: #000000;
+  display: block;
+  font: bold 16px/21px Georgia,"Times New Roman",Times,serif;
+  text-decoration: none;
+  height: 84px;
     
 }
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-block-1.block div.content p a:hover {
@@ -619,6 +619,17 @@ color: #000000;
 
 html.js body.front div#container.clearfix section#main.clearfix div.content div#homepage-nodes div.homepage-node {
   margin-bottom: 40px;
+}
+
+/* about block subsection */
+#about-submenu {
+  display: none;
+}
+
+#about-submenu a {
+  color: #000000;
+  font: normal 12px/30px Georgia,"Times New Roman",Times,serif;
+  text-decoration: none;
 }
 
 

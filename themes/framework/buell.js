@@ -34,6 +34,13 @@ $(document).ready(function() {
 	}
 	
 
+	/* show hide about subsections */
+	if (window.location.pathname == "/about") {
+		$("#about-submenu").show();
+	}
+
+
+
 	
 
 });
