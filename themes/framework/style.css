@@ -568,10 +568,6 @@ html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 
 /* rd sidebar block list items */
 
-#block-views-research_programs-block_1 h2:hover {
-  cursor: pointer;
-}
-
 #block-views-research_programs-block_1.block div.content div.view div.view-content div.item-list ul li.views-row {
 	color: red;
 	list-style-type: none;
@@ -592,7 +588,10 @@ html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 	
 }
 
-
+#block-views-research_programs-block_1 h2 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 
 html.js body div#container.clearfix aside#sidebar-left.sidebar section#block-views-research_programs-block_1.block h2 {

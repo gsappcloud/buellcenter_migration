@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+	$("#block-views-research_programs-block_1 h2").html("<a href=\"#\" id=\"rp_showhide\">Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span></a>");
+
 	$('a.show-conf').bind('click', function() {
 		// find element to show
 		var element_id = $(this).attr('id');
@@ -33,7 +36,6 @@ $(document).ready(function() {
 		$('body').css('background-color', "\#" + bg2);
 	}
 	
-
 	/* show hide about subsections */
 	if (
 		(window.location.pathname == "/about")   || 
@@ -41,7 +43,7 @@ $(document).ready(function() {
 		(window.location.pathname == "/people")  ||
 		(window.location.pathname == "/contact")) {
 		$("#about-submenu").show();
-		$("#rp_showhide").text("[ + ]");
+		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
 		$("div.view-id-research_programs").hide();
 		document.cookie = "buellcenter-org-menu=hidden";
 	}
@@ -50,30 +52,27 @@ $(document).ready(function() {
 	/* adding the plus minus logic here, since the default drupal block title does not
 	   support HTML characters */
 	//var rp_title = $("#block-views-research_programs-block_1 h2").html();
-	$("#block-views-research_programs-block_1 h2").html("Research &amp; Programs <span id=\"rp_showhide\" style=\"font-weight: normal;\">[ - ]</span>");
 
 	// show hide menu based on cookie
  	var current_state = document.cookie;
- 	console.log(current_state);
 
- 	if (current_state.indexOf("buellcenter-org-menu=showing") < 0) {
+ 	if (current_state.indexOf("buellcenter-org-menu=hidden") > 0) {
  		// hide the menu based on cookie
- 		$("#research_programs_showhide").text("[ + ]");
+		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
   	$("div.view-id-research_programs").hide();
  	}
 
-	var counter = 0;
-	$('#block-views-research_programs-block_1 h2').bind("click", function() {
-  	if (counter % 2 == 0) {
-  		$("#rp_showhide").text("[ + ]");
-  		$("div.view-id-research_programs").hide();
-  		document.cookie = "buellcenter-org-menu=hidden";
-  	} else {
-  		$("#rp_showhide").text("[ - ]");
-  		$("div.view-id-research_programs").show();
+	$('#rp_showhide').bind("click", function() {
+		console.log('click');
+		if (current_state.indexOf("buellcenter-org-menu=hidden") > 0) {
+	 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
+			$("div.view-id-research_programs").show();
 			document.cookie = "buellcenter-org-menu=showing";
+	 	} else {
+		  $("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
+			$("div.view-id-research_programs").hide();
+			document.cookie = "buellcenter-org-menu=hidden";
   	}
-  	counter++;
   });
 
 });
