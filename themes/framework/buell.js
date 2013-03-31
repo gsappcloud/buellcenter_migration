@@ -1,21 +1,21 @@
 $(document).ready(function() {
 
  	//console.log(getMenuStatus());
- 	//console.log(document.cookie);
-/*
+ 	//console.log("cookie is " + document.cookie + " --- end cookie");
+
 
  	// if cookie contains conflicting values defer to show and erase the rest
 	if (	(document.cookie.indexOf("buellcenter-org-menu=hidden") > -1) && 
 				(document.cookie.indexOf("buellcenter-org-menu=showing") > -1)) {
-		console.log("cookie is confused");
+		//console.log("cookie is confused");
 		// show the menu
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
   	$("div.view-id-research_programs").show();
 		document.cookie = "buellcenter-org-menu" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-		console.log('wiped cookie');
-		console.log(document.cookie);
+		//console.log('wiped cookie');
+		//console.log(document.cookie);
 	}
-*/
+
 
 
 	$("#block-views-research_programs-block_1 h2").html(
@@ -140,6 +140,6 @@ function getMenuStatus()
 
 function setMenuStatus(status) {
 	document.cookie = "buellcenter-org-menu=" + status;
-	//console.log('status set to ' + status);
-	//console.log(document.cookie);
+	//console.log('setMenuStatus - status set to ' + status);
+	//console.log('setMenuStatus = ' + document.cookie);
 }
