@@ -1,7 +1,26 @@
 $(document).ready(function() {
 
+ 	//console.log(getMenuStatus());
+ 	//console.log(document.cookie);
+/*
 
-	$("#block-views-research_programs-block_1 h2").html("<a href=\"#\" id=\"rp_showhide\">Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span></a>");
+ 	// if cookie contains conflicting values defer to show and erase the rest
+	if (	(document.cookie.indexOf("buellcenter-org-menu=hidden") > -1) && 
+				(document.cookie.indexOf("buellcenter-org-menu=showing") > -1)) {
+		console.log("cookie is confused");
+		// show the menu
+		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
+  	$("div.view-id-research_programs").show();
+		document.cookie = "buellcenter-org-menu" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		console.log('wiped cookie');
+		console.log(document.cookie);
+	}
+*/
+
+
+	$("#block-views-research_programs-block_1 h2").html(
+		"<a href=\"#\" id=\"rp_showhide\">Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span></a>");
+
 
 	$('a.show-conf').bind('click', function() {
 		// find element to show
@@ -36,7 +55,7 @@ $(document).ready(function() {
 		$('body').css('background-color', "\#" + bg2);
 	}
 	
-	/* show hide about subsections */
+	// show hide about subsections
 	if (
 		(window.location.pathname == "/about")   || 
 		(window.location.pathname == "/history") ||
@@ -45,7 +64,9 @@ $(document).ready(function() {
 		$("#about-submenu").show();
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
 		$("div.view-id-research_programs").hide();
-		document.cookie = "buellcenter-org-menu=hidden";
+		setMenuStatus("hidden");
+		//console.log('modified cookie due to about or subsections');
+		//console.log('cookie now is ' + document.cookie);
 	}
 
 	/* research programs block show hide */
@@ -54,26 +75,71 @@ $(document).ready(function() {
 	//var rp_title = $("#block-views-research_programs-block_1 h2").html();
 
 	// show hide menu based on cookie
- 	var current_state = document.cookie;
-
- 	if (current_state.indexOf("buellcenter-org-menu=hidden") > 0) {
- 		// hide the menu based on cookie
+	if (getMenuStatus() == "hidden") {
 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
   	$("div.view-id-research_programs").hide();
- 	}
+  	//console.log("status was hidden so done hiding menu");
+	} else if (getMenuStatus() == "showing") {
+		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
+  	$("div.view-id-research_programs").show();
+  	//console.log("status was showing so done showing menu");
+	} else {
+		// no status found yet so show it and set it
+		//console.log('status not found ! - showing');
+		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
+  	$("div.view-id-research_programs").show();
+  	setMenuStatus("showing");
+	}
+	//console.log("processed status = it is now " + getMenuStatus());
 
+	// click events
 	$('#rp_showhide').bind("click", function() {
-		console.log('click');
-		if (current_state.indexOf("buellcenter-org-menu=hidden") > 0) {
-	 		$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
-			$("div.view-id-research_programs").show();
-			document.cookie = "buellcenter-org-menu=showing";
-	 	} else {
-		  $("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
-			$("div.view-id-research_programs").hide();
-			document.cookie = "buellcenter-org-menu=hidden";
-  	}
+		//console.log('click registerd');
+		//console.log('cookie is ' + document.cookie);
+		//console.log("status read is " + getMenuStatus());
+		
+		if (getMenuStatus() == "hidden") {
+			//console.log("hiding so switching to show");
+			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
+  		$("div.view-id-research_programs").show();
+  		setMenuStatus("showing");
+		} else if (getMenuStatus() == "showing") {
+			//console.log("showing so switch to hide");
+			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ + ]</span>");
+  		$("div.view-id-research_programs").hide();
+  		setMenuStatus("hidden");
+		} else {
+			// a click registered but no cookie yet - this should not be possible
+			// set it to showing
+			$("#rp_showhide").html("Research &amp; Programs <span style=\"font-weight: normal;\">[ - ]</span>");
+  		$("div.view-id-research_programs").show();
+  		setMenuStatus("showing");
+  		//console.log('no status - set to show');
+
+		}
+		//console.log('done click = status is now ' + getMenuStatus());
+		//console.log(document.cookie);
   });
 
-});
+}); // end doc loop
 
+function getMenuStatus()
+{
+  var cookies = document.cookie.split(";");
+  var index;
+  for(index = 0; index < cookies.length; index++)
+  {
+    cookieEntry = cookies[index].split("=");
+    if ("buellcenter-org-menu" == $.trim(cookieEntry[0]))
+    {
+       return cookieEntry[1];
+    }
+  }
+  return null;
+}
+
+function setMenuStatus(status) {
+	document.cookie = "buellcenter-org-menu=" + status;
+	//console.log('status set to ' + status);
+	//console.log(document.cookie);
+}

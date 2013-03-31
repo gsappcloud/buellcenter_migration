@@ -587,6 +587,9 @@ html.js body div#container.clearfix footer#footer.clearfix a.feed-icon img {
 	text-decoration: underline;
 	
 }
+#block-views-research_programs-block_1 h2 a {
+  text-decoration: none;
+}
 
 #block-views-research_programs-block_1 h2 a:hover {
   text-decoration: underline;

@@ -119,11 +119,11 @@
     	</a>
     </div>
 
-    <footer id="footer" role="contentinfo" class="clearfix">
-      <?php print $footer_message; ?>
-      <?php if (!empty($footer)): print $footer; endif; ?>
-      <?php print $feed_icons ?>
-    </footer> <!-- /#footer -->
+    <!--<footer id="footer" role="contentinfo" class="clearfix">
+      <?php //print $footer_message; ?>
+      <?php //if (!empty($footer)): print $footer; endif; ?>
+      <?php //print $feed_icons ?>
+    </footer>--> <!-- /#footer -->
 
     <?php print $closure ?>
 
